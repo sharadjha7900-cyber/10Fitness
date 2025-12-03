@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fitness Club</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        body {
+            background: #f3f3f3;
+            color: #222;
+        }
+
+        /* NAVBAR */
+        nav {
+            background: #000;
+            padding: 15px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: #fff;
+        }
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 25px;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        /* HERO */
+        .hero {
+            height: 90vh;
+            background: url('https://images.unsplash.com/photo-1558611848-73f7eb4001a1') center/cover no-repeat;
+            display: flex;
+            align-items: center;
+            padding-left: 60px;
+            color: white;
+            background-attachment: fixed;
+        }
+        .hero h1 {
+            font-size: 60px;
+            width: 50%;
+        }
+
+        /* SECTIONS */
+        section {
+            padding: 60px;
+        }
+        h2 {
+            text-align: center;
+            margin-bottom: 25px;
+            font-size: 32px;
+            color: #333;
+        }
+
+        /* GRID */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+
+        /* CARDS */
+        .card {
+            background: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+        .card img {
+            width: 100%;
+            border-radius: 10px;
+            margin-bottom: 15px;
+        }
+
+        /* MEMBERSHIP */
+        .price {
+            font-size: 30px;
+            font-weight: bold;
+            margin: 10px 0;
+            color: #d92332;
+        }
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background: #d92332;
+            color: #fff;
+            border-radius: 5px;
+            text-decoration: none;
+            margin-top: 10px;
+            font-weight: bold;
+        }
+
+        /* FOOTER */
+        footer {
+            background: #111;
+            padding: 20px;
+            text-align: center;
+            color: #eee;
+            margin-top: 40px;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 40px;
+                width: 100%;
+            }
+        }
+    </style>
+
+</head>
+<body>
+
+    <nav>
+        <h1>FitLife Club</h1>
+        <ul>
+            <li><a href="#classes">Classes</a></li>
+            <li><a href="#trainers">Trainers</a></li>
+            <li><a href="#plans">Membership</a></li>
+            <li><a href="#blog">Blog</a></li>
+        </ul>
+    </nav>
+
+    <div class="hero">
+        <h1>Transform Your Body, Elevate Your Mind</h1>
+    </div>
+
+    <!-- Classes -->
+    <section id="classes">
+        <h2>Our Classes</h2>
+        <div class="grid">
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1517963628607-1dfd6e99d235" alt="">
+                <h3>Yoga</h3>
+                <p>Improve flexibility, reduce stress, and find inner peace.</p>
+            </div>
+
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1558611848-73f7eb4001a1" alt="">
+                <h3>Strength Training</h3>
+                <p>Build muscle, burn fat, and get stronger every day.</p>
+            </div>
+
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1584467735867-b76116f0cbdf" alt="">
+                <h3>Cardio Blast</h3>
+                <p>High-intensity classes designed to improve stamina.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trainers -->
+    <section id="trainers">
+        <h2>Meet Our Trainers</h2>
+        <div class="grid">
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1599058917212-d750089bc07d" alt="">
+                <h3>Rahul Mehta</h3>
+                <p>Strength & Conditioning Expert</p>
+            </div>
+
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1600051365514-40f1637d9baa" alt="">
+                <h3>Priya Sharma</h3>
+                <p>Certified Yoga Instructor</p>
+            </div>
+
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1598579695278-e892fa0bcd3a" alt="">
+                <h3>Akash Verma</h3>
+                <p>HIIT & Cardio Specialist</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Membership Plans -->
+    <section id="plans">
+        <h2>Membership Plans</h2>
+        <div class="grid">
+            <div class="card">
+                <h3>Basic Plan</h3>
+                <div class="price">₹999 / month</div>
+                <p>✔ Gym Access<br>✔ Locker Facility<br>✖ Personal Trainer</p>
+                <a class="btn" href="#">Join Now</a>
+            </div>
+
+            <div class="card">
+                <h3>Pro Plan</h3>
+                <div class="price">₹1499 / month</div>
+                <p>✔ Gym + Classes<br>✔ Locker Facility<br>✔ Diet Chart</p>
+                <a class="btn" href="#">Join Now</a>
+            </div>
+
+            <div class="card">
+                <h3>Elite Plan</h3>
+                <div class="price">₹2499 / month</div>
+                <p>✔ All Facilities<br>✔ Personal Trainer<br>✔ VIP Lounge</p>
+                <a class="btn" href="#">Join Now</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog -->
+    <section id="blog">
+        <h2>Fitness Tips & Blog</h2>
+        <div class="grid">
+            <div class="card">
+                <h3>How to Build a Consistent Workout Routine</h3>
+                <p>Simple steps to stay motivated and disciplined.</p>
+            </div>
+
+            <div class="card">
+                <h3>Top 10 Post-Workout Foods</h3>
+                <p>Fuel your body with the right nutrients.</p>
+            </div>
+
+            <div class="card">
+                <h3>Benefits of Morning Exercise</h3>
+                <p>Why starting early gives you an edge.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        © 2025 FitLife Club | All Rights Reserved
+    </footer>
+
+</body>
+</html>
